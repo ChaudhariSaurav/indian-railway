@@ -13,6 +13,7 @@ const Navigation = () => (
             <Nav.Item href='/liverun'>Get Live Running</Nav.Item>
             <Nav.Item icon={<CogIcon />} href='/seat'> Seat Available</Nav.Item>
         </Nav>
+        {/* crete the side navbar  */}
     </Navbar>
 );
 
