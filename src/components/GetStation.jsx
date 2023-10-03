@@ -13,7 +13,7 @@ function GetStation() {
     const fetchStationsBetween = async () => {
         setLoading(true);
         try {
-            const response = await axios.get(`http://localhost:5555/stationsBetween?from=${fromStation}&to=${toStation}`);
+            const response = await axios.get(`  https://railway-a3r5.onrender.com/stationsBetween?from=${fromStation}&to=${toStation}`);
             setStationsData(response.data);
         } catch (error) {
             console.error(error);
@@ -27,7 +27,7 @@ function GetStation() {
         <div className='shadow text-center' >
             <h1 className='text-center mt-5 gap-x-5'>Indian Railway Stations Between</h1>
 
-            <div className="p-5 grid gap-6 mb-6 md:grid-cols-3">
+            <div className="p-5 grid grid-cols-1 gap-6 mb-6 md:grid-cols-3 ">
                 <div>
 
                     <input

@@ -13,7 +13,7 @@ function GETLive() {
     const fetchLiveRoute = async () => {
         setLoading(true);
         try {
-            const response = await axios.get(`http://localhost:5555/getLive/${trainNo}/ ${searchString}/${convertedDate}`);
+            const response = await axios.get(`https://railway-a3r5.onrender.com/getLive/${trainNo}/${searchString}/${convertedDate}`);
             setLive(response.data);
         } catch (error) {
 
@@ -43,7 +43,7 @@ function GETLive() {
                 <h1 >{live?.trainNumber}  Live Running Status</h1>
                 <h3>{live?.trainName} </h3>
             </div>
-            <div className="max-w-2xl mx-auto mt-6 ">
+            <div className="max-w-2xl mx-auto mt-6 p-5 ">
                 <div className="relative">
 
                     <div className="mb-2">

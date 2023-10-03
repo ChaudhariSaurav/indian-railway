@@ -9,7 +9,7 @@ function GetRoute() {
     const fetchTrainRoute = async () => {
         setLoading(true);
         try {
-            const response = await axios.get(`http://localhost:5555/getRoute/${trainNo}`);
+            const response = await axios.get(`  https://railway-a3r5.onrender.com/getRoute/${trainNo}`);
             setRouteData(response.data);
         } catch (error) {
             console.error(error);
@@ -25,8 +25,8 @@ function GetRoute() {
         </>
     }
     return (
-        <div>
-            <h1 className='text-center mt-5 gap-x-5'>Indian Railway Train Route</h1>
+        <div className='p-3'>
+            <h1 className='text-center mt-5 gap-y-5'>Train Route</h1>
             <div className="max-w-2xl mx-auto">
                 <div className="relative">
                     <div className="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
@@ -68,7 +68,7 @@ function GetRoute() {
 
                 {routeData && (
                     <>
-                        <div className='flex-col w-full p-5'>
+                        <div className='flex-col w-full mt-3'>
                             <div className="relative overflow-x-auto">
                                 <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                                     <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-[#082b71] dark:text-white">

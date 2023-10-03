@@ -12,7 +12,7 @@ function App() {
   const fetchTrainData = async () => {
     setLoading(true); // Set loading to true while fetching data
     try {
-      const response = await axios.get(`http://localhost:5555/getTrainData/${trainNo}`);
+      const response = await axios.get(`  https://railway-a3r5.onrender.com/getTrainData/${trainNo}`);
       setTrainData(response.data);
     } catch (error) {
       console.error(error);

@@ -19,7 +19,7 @@ function SearchForm() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:5555/search', formData);
+            const response = await axios.post('https://railway-a3r5.onrender.com/search', formData);
             setSearchResult(response.data);
             setError(null);
         } catch (error) {

@@ -11,9 +11,11 @@ const Navigation = () => (
             <Nav.Item href='/route'>Get Route</Nav.Item>
             <Nav.Item href='/live'>Get Live</Nav.Item>
             <Nav.Item href='/liverun'>Get Live Running</Nav.Item>
+            <Nav.Item icon={<CogIcon />} href='/seat'> Seat Available</Nav.Item>
         </Nav>
         <Nav pullRight>
-            <Nav.Item icon={<CogIcon />} href='/seat'> Seat Available</Nav.Item>
+
+
         </Nav>
     </Navbar>
 );

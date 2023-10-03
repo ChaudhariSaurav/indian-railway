@@ -9,7 +9,7 @@ function LiveRunningStatus() {
     const fetchLiveRunning = async () => {
         setLoading(true);
         try {
-            const response = await axios.get(`http://localhost:5555/Liverunning/${trainNo}`);
+            const response = await axios.get(`https://railway-a3r5.onrender.com/getLtsDetails/${trainNo}`);
             setliverunningData(response.data);
         } catch (error) {
             console.error(error);
@@ -22,8 +22,8 @@ function LiveRunningStatus() {
 
     return (
         <div>
-            <h1 className='text-center mt-5 gap-x-5'>Indian Railway Train Route (Live status)</h1>
-            <div className="max-w-2xl mx-auto">
+            <h1 className='text-center mt-5 gap-x-5'>Indian Railway </h1>
+            <div className="max-w-2xl mx-auto p-5">
                 <div className="relative">
                     <div className="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
                         <svg
@@ -62,36 +62,38 @@ function LiveRunningStatus() {
             </div>
             <div >
                 {loading && <p className='text-center mt-5 h-screen justify-center text-xl'>Please wait....</p>}
-                {liverunningData && (
-                    <table className="min-w-full">
-                        <thead>
-                            <tr>
-                                <th className="px-4 py-2">Train Number</th>
-                                <th className="px-4 py-2">Train Name</th>
-                                <th className="px-4 py-2">Running Date</th>
-                                <th className="px-4 py-2 text-green-600">Current At</th>
-                                <th className="px-4 py-2">Last Halt At</th>
-                                <th className="px-4 py-2">Upcoming Station At</th>
-                                <th className="px-4 py-2">Running Status</th>
-                                <th className="px-4 py-2 text-red-600 font-semibold">Delayed By</th>
-                                <th className="px-4 py-2">Last Update Time</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td className="border px-4 py-2">{liverunningData?.trainNumber}</td>
-                                <td className="border px-4 py-2">{liverunningData?.trainName}</td>
-                                <td className="border px-4 py-2">{liverunningData?.consideredRunningDate}</td>
-                                <td className="border px-4 py-2  text-green-600 font-semibold">{liverunningData?.currentlyAt}</td>
-                                <td className="border px-4 py-2">{liverunningData?.lastHaltStation}</td>
-                                <td className="border px-4 py-2">{liverunningData?.upcomingStation}</td>
-                                <td className="border px-4 py-2">{liverunningData?.runningStatus?.status}</td>
-                                <td className="border px-4 py-2 text-red-600 font-semibold">{liverunningData?.runningStatus?.header}</td>
-                                <td className="border px-4 py-2">{liverunningData?.ltsLastUpdatedTime}</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                )}
+                <div>
+                    {liverunningData && (
+                        <table className="w-full table-auto overflow-x-auto" >
+                            <thead>
+                                <tr>
+                                    <th className="px-4 py-2">Train Number</th>
+                                    <th className="px-4 py-2">Train Name</th>
+                                    <th className="px-4 py-2">Running Date</th>
+                                    <th className="px-4 py-2 text-green-600">Current At</th>
+                                    <th className="px-4 py-2">Last Halt At</th>
+                                    <th className="px-4 py-2">Upcoming Station At</th>
+                                    <th className="px-4 py-2">Running Status</th>
+                                    <th className="px-4 py-2 text-red-600 font-semibold">Delayed By</th>
+                                    <th className="px-4 py-2">Last Update Time</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td className="border px-4 py-2">{liverunningData?.trainNumber}</td>
+                                    <td className="border px-4 py-2">{liverunningData?.trainName}</td>
+                                    <td className="border px-4 py-2">{liverunningData?.consideredRunningDate}</td>
+                                    <td className="border px-4 py-2  text-green-600 font-semibold">{liverunningData?.currentlyAt}</td>
+                                    <td className="border px-4 py-2">{liverunningData?.lastHaltStation}</td>
+                                    <td className="border px-4 py-2">{liverunningData?.upcomingStation}</td>
+                                    <td className="border px-4 py-2">{liverunningData?.runningStatus?.status}</td>
+                                    <td className="border px-4 py-2 text-red-600 font-semibold">{liverunningData?.runningStatus?.header}</td>
+                                    <td className="border px-4 py-2">{liverunningData?.ltsLastUpdatedTime}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    )}
+                </div>
 
 
                 {/* {liverunningData?.trainNumber} */}
