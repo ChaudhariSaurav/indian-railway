@@ -3,7 +3,7 @@ import axios from 'axios';
 // import { Input, InputGroup, } from 'rsuite';
 // import SearchIcon from '@rsuite/icons/Search';
 
-function App() {
+function GetTrainDetails() {
   const [trainNo, setTrainNo] = useState('');
   const [trainData, setTrainData] = useState(null);
   const [loading, setLoading] = useState(false); // Add a loading state
@@ -78,4 +78,4 @@ function App() {
   );
 }
 
-export default App;
+export default GetTrainDetails;

@@ -1,13 +1,13 @@
-import './App.css'
-import GetTrainDetails from './components/GetTrainDetails'
+// import './App.css'
+// import GetTrainDetails from './components/GetTrainDetails'
 
-function App() {
+// function App() {
 
-  return (
-    <>
-      <GetTrainDetails />
-    </>
-  )
-}
+//   return (
+//     <>
+//       <GetTrainDetails />
+//     </>
+//   )
+// }
 
-export default App
+// export default App
