@@ -49,7 +49,7 @@ function WelcomePage() {
         <div className="h-screen w-full  max-w-lg  justify-center item-center gap-2 p-4 text-center">
             <div className="text-center text-xl">Welcome to the Indian Railway </div>
 
-            <div className=' class="flex flex-wrap -mx-3 mb-6" justify-center item-center text-center'>
+            <div className=' className="flex flex-wrap -mx-3 mb-6" justify-center item-center text-center'>
                 <form onSubmit={handleSubmit} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
                     <label>
                         From Station Code:
